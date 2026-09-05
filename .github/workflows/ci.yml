@@ -21,6 +21,10 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
+      #Revisar el estilo con ruff
+      - name: Lint with ruff
+        run: ruff check .
+
       #Ejecuta los tests del proyecto
       - name: Run tests
         run: pytest
